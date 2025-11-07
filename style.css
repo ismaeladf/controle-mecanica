@@ -1,0 +1,273 @@
+/* ===== Estilos gerais ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+}
+
+main {
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+/* ===== Cabeçalhos ===== */
+h2 {
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+.titulo-secao {
+    color: #1d6fa5;
+    margin-top: 20px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    border-bottom: 3px solid #1d6fa5;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.titulo-grupo {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== Layout dos setores ===== */
+.setores-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1px;
+    margin-top: 1px;
+}
+
+.setor {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+.colunas {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.botao-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== Botões gerais ===== */
+.botao-coluna a,
+.botao-grupo a {
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 150px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.botao-coluna a:hover,
+.botao-grupo a:hover {
+    background-color: #1d6fa5;
+    transform: scale(1.05);
+}
+
+/* 🔸 Botões de Fresadora (laranja) */
+/* 🔸 Botões de Fresadora (laranja) */
+.botao-coluna a[href*="fresa"],
+.botao-grupo a[href*="fresa"] {
+    background-color: #e67e22; /* laranja padrão */
+}
+
+.botao-coluna a[href*="fresa"]:hover,
+.botao-grupo a[href*="fresa"]:hover {
+    background-color: #cf6d14; /* tom mais escuro ao passar o mouse */
+}
+
+
+.setor h3:contains("Fresadoras") ~ .colunas a:hover,
+.botao-coluna a[href*="fresa"]:hover,
+.botao-grupo a[href*="fresa"]:hover {
+    background-color: #cf6d14;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+    .setor {
+        width: 100%;
+    }
+    .colunas {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* ===== Páginas de Login (Tornos e Fresadoras) ===== */
+
+/* ===== Página de login (torno1.html) ===== */ 
+.login-container { display: flex; justify-content: center; align-items: center; height: 80vh; } 
+.login-box { 
+  background-color: white; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  padding: 30px 40px;
+   width: 320px; 
+   text-align: left; 
+} 
+
+  .login-box h2 { 
+  text-align: center; 
+  color: #2c3e50; 
+  margin-bottom: 20px; 
+} 
+    
+.login-box label { 
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+  color: #333; 
+} .login-box input, 
+
+.login-box select { 
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 15px;
+   border-radius: 6px; 
+   border: 1px solid #ccc; 
+   font-size: 14px; 
+} 
+.login-box input:focus, .login-box select:focus {
+   border-color: #3498db; 
+   outline: none; 
+} 
+
+.login-box button {
+   width: 100%; 
+   background-color: #3498db; 
+   color: white; 
+   padding: 10px; 
+   border: none; 
+   border-radius: 6px; 
+   font-size: 16px; 
+   cursor: pointer; 
+   transition: background-color 0.3s, transform 0.1s; 
+} 
+
+.login-box button:hover { 
+  background-color: #1d6fa5; 
+  transform: scale(1.03); 
+} 
+
+/* ===== Botão Voltar ===== */ 
+.voltar-container {
+   text-align: center; 
+   margin-top: 15px; 
+} 
+
+.btn-voltar { 
+  display: inline-block;
+  background-color: #3498db; 
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: background-color 0.3s, transform 0.1s; 
+} 
+
+.btn-voltar:hover { 
+  background-color: #1d6fa5; 
+  transform: scale(1.05); }
+
+/* =====Dashboard tornos ======== */
+
+.dashboard-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tabela-container {
+  margin-bottom: 25px;
+}
+
+.tabela-container h2 {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.tabela-container form,
+.tabela-container textarea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tabela-container input,
+.tabela-container select,
+.tabela-container textarea {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.acoes-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.acoes-container button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.acoes-container button:hover {
+  background: #005fa3;
+}
+
+#tabelaRegistros {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tabelaRegistros th,
+#tabelaRegistros td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
