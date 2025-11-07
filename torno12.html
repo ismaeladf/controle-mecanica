@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torno 12 - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Torno 12 - Acesso Restrito</h1>
+    </header>
+
+    <div class="voltar-container">
+        <a href="index.html" class="btn-voltar">⟵ Voltar à Página Inicial</a>
+    </div>
+
+    <main class="login-container">
+        <form class="login-box" id="form-login" data-torno="12">
+            <h2>Login de Acesso</h2>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <label for="perfil">Perfil:</label>
+            <select id="perfil" name="perfil" required>
+                <option value="">Selecione...</option>
+                <option value="professor">Professor</option>
+                <option value="aluno">Aluno</option>
+                <option value="terceiros">Terceiros</option>
+            </select>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </main>
+
+    <!-- 🔸 Script de automação de login -->
+    <script src="script-torno-setor-12.js"></script>
+
+</body>
+</html>

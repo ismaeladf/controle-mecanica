@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torno 27 - Registro de Manutenção</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Torno 27 - Registro de Manutenção</h1>
+  </header>
+
+  <main class="dashboard-container">
+
+    <!-- 🔹 Tabela de Atividade Realizada -->
+    <section class="tabela-container">
+      <h2>Atividade Realizada</h2>
+      <form id="formAtividade">
+        <label for="tipo">Tipo de Manutenção:</label>
+        <select id="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="Corretiva">Corretiva</option>
+          <option value="Preventiva">Preventiva</option>
+          <option value="Preditiva">Preditiva</option>
+        </select>
+
+        <label for="oleo">Troca de Óleo:</label>
+        <input type="text" id="oleo" placeholder="Ex: SAE 20W50">
+
+        <label for="condicao">Condição de Funcionamento:</label>
+        <select id="condicao" required>
+          <option value="">Selecione...</option>
+          <option value="Liberada">Liberada</option>
+          <option value="Bloqueada">Bloqueada</option>
+        </select>
+      </form>
+    </section>
+
+    <!-- 🔹 Tabela de Observações -->
+    <section class="tabela-container">
+      <h2>Observações</h2>
+      <textarea id="observacao" rows="4" placeholder="Descreva trocas, compras de peças, etc."></textarea>
+    </section>
+
+    <!-- 🔹 Botões de Ação -->
+    <div class="acoes-container">
+      <button id="btnSalvar">💾 Salvar Registro</button>
+      <button id="btnVerRegistros">📋 Ver Registros</button>
+      <button id="btnVoltarLogin">↩ Voltar ao Login</button>
+    </div>
+
+    <!-- 🔹 Área de Exibição dos Registros -->
+    <section id="registros" class="tabela-container" style="display:none;">
+      <h2>Registros Salvos</h2>
+      <table id="tabelaRegistros">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Óleo</th>
+            <th>Condição</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="script-torno27-dashboard.js"></script>
+</body>
+</html>
